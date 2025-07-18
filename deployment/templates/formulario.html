@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Predicción</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('/static/CS1.6.webp');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      background-color: rgba(255,255,255,0.9);
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    input, button {
+      margin: 5px;
+      padding: 10px;
+      width: 80%;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #003893;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Formulario de Predicción</h2>
+    <form action="/predict" method="post">
+      <input type="number" step="any" min="0" name="TimeAlive" placeholder="Tiempo Vivo (segundos)" required><br>
+      <input type="number" step="any" min="0" name="TravelledDistance" placeholder="Distancia Recorrida (km)" required><br>
+      <input type="number" step="any" min="0" name="RoundKills" placeholder="Kills Ronda" required><br>
+      <input type="number" step="any" min="0" name="MatchKills" placeholder="Kills Partida" required><br>
+      <input type="number" step="any" min="0" name="RoundAssists" placeholder="Asistencias Ronda" required><br>
+      <input type="number" step="any" min="0" name="MatchAssists" placeholder="Asistencias Partida" required><br>
+      <input type="number" step="any" min="0" name="RoundHeadshots" placeholder="Headshots Ronda" required><br>
+      <button type="submit">Predecir</button>
+    </form>
+  </div>
+</body>
+</html>

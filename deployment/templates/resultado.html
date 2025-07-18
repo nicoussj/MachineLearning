@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Resultado</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('/static/CS1.6.webp');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: rgba(255,255,255,0.9);
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    img {
+      border: 2px solid #003893;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      max-width: 100%;
+    }
+    a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #003893;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    a:hover {
+      background-color: #001f5c;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Resultado de la predicción: {{ resultado }}</h2>
+    <p>Probabilidad: {{ prob }}</p>
+    <img src="/static/roc_curve.png" alt="Curva ROC" width="400">
+    <br><a href="/">Volver</a>
+  </div>
+</body>
+</html>
